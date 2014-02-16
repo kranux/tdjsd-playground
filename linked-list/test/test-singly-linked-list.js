@@ -19,7 +19,13 @@ TestCase("ak.SinglyLinkedList tests", {
         assertEquals(1, list.firstNode.data);
     },
 
-    "test create list, insert element at beggining, insert element after, access its value": function() {
+    "test newly created list": function() {
+        var list = ak.SinglyLinkedList();
+        assertTrue("newly created list.isEmpty(0 should be true", list.isEmpty());
+        assertEquals("length of newly created list should be 0", list.length(), 0);
+    },
+
+    "test create list, insert element at beggining, insert element after, access its value, remove elements": function() {
         var list = ak.SinglyLinkedList(),
             first = new ak.Node(1),
             second = new ak.Node(2);
@@ -27,13 +33,17 @@ TestCase("ak.SinglyLinkedList tests", {
         list.insertAfter(first, second);
         assertSame("first element should be first", first, list.firstNode);
         assertSame("second element should be second", second, list.firstNode.next);
-    },
 
-    "test newly created list": function() {
-        var list = ak.SinglyLinkedList();
-        assertTrue("newly created list.isEmpty(0 should be true", list.isEmpty());
-        assertEquals("length of newly created list should be 0", list.length(), 0);
-    },
+        list.removeAfter(first);
+        assertEquals(list.length(), 1);
+        assertFalse(list.isEmpty());
+        assertEquals(list.firstNode.data, 1);
+        assertNull(list.firstNode.next);
 
+        list.removeBeginning();
+        assertEquals(list.length(), 0);
+        assertTrue(list.isEmpty(), true);
+        assertNull(list.firstNode);
+    },
 
 });

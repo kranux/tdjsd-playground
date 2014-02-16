@@ -1,7 +1,5 @@
 (function(global) {
 
-    //TODO: implement all methods! https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list
-    //TODO: test all methods
     function SinglyLinkedList() {
         if (!(this instanceof SinglyLinkedList)) {
             return new SinglyLinkedList();
