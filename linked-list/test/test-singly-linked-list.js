@@ -16,7 +16,7 @@ TestCase("ak.SinglyLinkedList tests", {
     "test create list, insert element at beggining access it's value": function() {
         var list = ak.SinglyLinkedList();
         list.insertBeginning(new ak.Node(1));
-        assertEquals(1, list.firstNode.data);
+        assertEquals(1, list.firstNode.data());
     },
 
     "test newly created list": function() {
@@ -32,13 +32,13 @@ TestCase("ak.SinglyLinkedList tests", {
         list.insertBeginning(first);
         list.insertAfter(first, second);
         assertSame("first element should be first", first, list.firstNode);
-        assertSame("second element should be second", second, list.firstNode.next);
+        assertSame("second element should be second", second, list.firstNode.next());
 
         list.removeAfter(first);
         assertEquals(list.length(), 1);
         assertFalse(list.isEmpty());
-        assertEquals(list.firstNode.data, 1);
-        assertNull(list.firstNode.next);
+        assertEquals(list.firstNode.data(), 1);
+        assertNull(list.firstNode.next());
 
         list.removeBeginning();
         assertEquals(list.length(), 0);

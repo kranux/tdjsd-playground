@@ -15,11 +15,11 @@ TestCase("ak.Node tests", {
 
     "test create new node and get correct data": function() {
         var head = new ak.Node(10);
-        assertEquals(head.data, 10);
+        assertEquals(head.data(), 10);
     },
 
     "test add next node and check if next() returns correct data": function() {
         var head = new ak.Node(10, new ak.Node(20));
-        assertEquals(head.next.data, 20);
+        assertEquals(head.next().data(), 20);
     },
 });
