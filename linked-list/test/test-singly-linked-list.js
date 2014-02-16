@@ -1,3 +1,5 @@
+"use strict";
+
 TestCase("ak.SinglyLinkedList tests", {
     "test if ak.SinglyLinkedList is defined in global space": function() {
         assert(typeof ak.SinglyLinkedList != 'undefined');

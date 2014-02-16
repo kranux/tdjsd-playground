@@ -1,3 +1,5 @@
+"use strict";
+
 (function(global) {
     function Node(data, next) {
 

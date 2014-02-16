@@ -1,3 +1,5 @@
+"use strict";
+
 TestCase("ak.Node tests", {
     "test if ak.Node is defined in global space": function() {
         assert(typeof ak.Node != 'undefined');
