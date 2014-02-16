@@ -4,18 +4,22 @@ Use js-test-driver for xUnit style tests.
 
 Download https://code.google.com/p/js-test-driver/downloads/list
 
+Instructions for Windows:
+
 set environment variable JSTESTDRIVER_HOME=c:\bin
 
 start test server:
 <pre>
->java -jar %JSTESTDRIVER_HOME%/JsTestDriver-1.3.5.jar --port 4224
+> java -jar %JSTESTDRIVER_HOME%/JsTestDriver-1.3.5.jar --port 4224
 </pre>
 
 navigate to http://localhost:4224/
 click on Capture This Browser
 
 run all tests in current dir:
-java -jar %JSTESTDRIVER_HOME%/JsTestDriver-1.3.5.jar --tests all
+<pre>
+> java -jar %JSTESTDRIVER_HOME%/JsTestDriver-1.3.5.jar --tests all
+</pre>
 
 config file jstestdriver.conf in YAML format:
 
@@ -25,5 +29,4 @@ server: http://localhost:4224
 load:
 - src/*.js
 - test/*.js
-
 </pre>
