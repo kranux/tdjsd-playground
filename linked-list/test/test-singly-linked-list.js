@@ -21,6 +21,55 @@ TestCase("ak.SinglyLinkedList tests", {
         assertEquals(1, list.firstNode.data());
     },
 
+    "test should only allow manipulate ak.Node objects": function() {
+        var list = ak.SinglyLinkedList(),
+            nodeLikeObject = {
+                data: function() {},
+                next: function() {},
+            },
+            node = new ak.Node(1);
+
+        assertException(function() {
+            list.insertBeginning();
+        }, "TypeError");
+
+        assertException(function() {
+            list.insertBeginning("");
+        }, "TypeError");
+
+        assertException(function() {
+            list.insertBeginning(false);
+        }, "TypeError");
+
+        assertException(function() {
+            list.insertBeginning(1);
+        }, "TypeError");
+
+        assertException(function() {
+            list.insertBeginning({});
+        }, "TypeError");
+
+        assertException(function() {
+            list.insertBeginning(nodeLikeObject);
+        }, "TypeError");
+
+        assertNoException(function() {
+            list.insertBeginning(node);
+        });
+
+        assertException(function() {
+            list.insertAfter(nodeLikeObject, nodeLikeObject);
+        }, "TypeError");
+
+        assertException(function() {
+            list.insertAfter(node, nodeLikeObject);
+        }, "TypeError");
+
+        assertException(function() {
+            list.removeAfter(nodeLikeObject);
+        }, "TypeError");
+    },
+
     "test newly created list": function() {
         var list = ak.SinglyLinkedList();
         assertTrue("newly created list.isEmpty(0 should be true", list.isEmpty());
