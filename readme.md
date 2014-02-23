@@ -6,7 +6,7 @@ Download <a href="https://code.google.com/p/js-test-driver/downloads/list" targe
 
 ## Setup instructions
 
-### MS Windows:
+### MS Windows
 
 set environment variable JSTESTDRIVER_HOME=c:\bin
 
@@ -16,9 +16,12 @@ add to .bashrc:
 
 <pre>export JSTESTDRIVER_HOME=~/bin</pre>
 
-##Starting test server
-1. start command from shell:
+## Starting test server
+
+1 start command from shell:
+
 ### MS Windows
+
 <pre>
 > java -jar %JSTESTDRIVER_HOME%/JsTestDriver-1.3.5.jar --port 4224
 </pre>
@@ -26,15 +29,16 @@ add to .bashrc:
 ### Linux
 <pre>java -jar $JSTESTDRIVER_HOME/JsTestDriver-1.3.5.jar --port 4224</pre>
 
-2. In browsers you want to run tests navigate to <a href="http://localhost:4224/">http://localhost:4224/</a>
-3. When page loads click on "Capture This Browser"
+2 In browsers you want to run tests navigate to <a href="http://localhost:4224/">http://localhost:4224/</a>
+3 When page loads click on "Capture This Browser"
 
 ## Running tests
-1. Navigate to source directory
+1 Navigate to source directory
 
-2. Run command in shell:
+2 Run command in shell:
 
 ### MS Windows
+
 <pre>
 > java -jar %JSTESTDRIVER_HOME%/JsTestDriver-1.3.5.jar --tests all
 </pre>
