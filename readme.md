@@ -30,6 +30,7 @@ add to .bashrc:
 <pre>java -jar $JSTESTDRIVER_HOME/JsTestDriver-1.3.5.jar --port 4224</pre>
 
 2) In browsers you want to run tests navigate to <a href="http://localhost:4224/">http://localhost:4224/</a>
+
 3) When page loads click on "Capture This Browser"
 
 ## Running tests
