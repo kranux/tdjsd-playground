@@ -2,7 +2,7 @@ Implementing simple data structures and algorithms with JavaScript while reading
 
 Use js-test-driver for xUnit style tests.
 
-Download https://code.google.com/p/js-test-driver/downloads/list
+Download <a href="https://code.google.com/p/js-test-driver/downloads/list" target="_blank>https://code.google.com/p/js-test-driver/downloads/list</a>
 
 Instructions for Windows:
 
